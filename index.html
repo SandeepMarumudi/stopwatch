@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+        }
+        #whole {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #watch {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        #container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        button {
+            background-color: #00acc1;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+        button:hover {
+            background-color: #007c91;
+        }
+    </style>
+</head>
+<body>
+    <div id="whole">
+        <div id="watch">00:00:00:000</div>
+        <div id="container">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="./stopwatch.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        #watch{
+            box-sizing: border-box;
+            font-size: xx-large;
+        }
+        #container{
+            box-sizing: border-box;
+            font-size: xx-large;
+            border-radius: 10px;
+        display:flex;
+        justify-content: space-between;
+        width: 25%;
+            
+        }
+        #body{
+            
+            
+        }
+        #whole{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20%;
+            background-color: aqua;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div id="whole">
+
+        <div id="watch">00:00:00:000</div>
+        <div id="container">
+            <button id="start">start</button>
+            <button id="pause">pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="./stopwatch.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        #time {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        button {
+            font-size: 1em;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="time">00:00:00</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        let interval;
+        let elapsedTime = 0;
+
+        function updateTime() {
+            elapsedTime += 10;
+            let date = new Date(elapsedTime);
+            let minutes = String(date.getMinutes()).padStart(2, '0');
+            let seconds = String(date.getSeconds()).padStart(2, '0');
+            let milliseconds = String(date.getMilliseconds()).padStart(3, '0');
+            document.getElementById('time').innerText = `${minutes}:${seconds}:${milliseconds}`;
+        }
+
+        document.getElementById('start').addEventListener('click', function() {
+            if (!interval) {
+                interval = setInterval(updateTime, 10);
+            }
+        });
+
+        document.getElementById('stop').addEventListener('click', function() {
+            clearInterval(interval);
+            interval = null;
+        });
+
+        document.getElementById('reset').addEventListener('click', function() {
+            clearInterval(interval);
+            interval = null;
+            elapsedTime = 0;
+            document.getElementById('time').innerText = '00:00:00';
+        });
+    </script>
+</body>
+</html> -->
